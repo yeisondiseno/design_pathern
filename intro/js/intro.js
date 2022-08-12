@@ -70,3 +70,18 @@ console.log(drink.info());
 
 const drink2 = new Drink2("Cerveza");
 console.log(drink2.info());
+
+// herencia
+class Beer extends Drink {
+  constructor(name, alcohol) {
+    super(name);
+    this.alcohol = alcohol;
+  }
+
+  info() {
+    return `${super.info()} ${this.alcohol}`;
+  }
+}
+
+const beer = new Beer("Erdinger", 8.5);
+console.log(beer.info());
