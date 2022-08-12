@@ -47,3 +47,26 @@ const total = numbers.reduce((ac, number) => {
   return ac + number * 2;
 }, 0); // el valor despues de la coma es el valor inicial del acumulado
 console.log("total", total);
+
+// clases
+class Drink {
+  constructor(name) {
+    this.name = name;
+  }
+
+  info() {
+    return `La debida es: ${this.name}`;
+  }
+}
+
+// clases funcionales
+function Drink2(name) {
+  this.name = name;
+  this.info = () => `La debida es: ${this.name}`;
+}
+
+const drink = new Drink("Agua");
+console.log(drink.info());
+
+const drink2 = new Drink2("Cerveza");
+console.log(drink2.info());
