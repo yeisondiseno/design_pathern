@@ -44,14 +44,14 @@ class ForeignSaleStrategy {
 }
 
 const regularSale = new RegularSaleStrategy(0.16);
-const discoutSale = new DiscountSaleStrategy(0.16, 3);
-const foreingSale = new ForeignSaleStrategy();
+const disCountSale = new DiscountSaleStrategy(0.16, 3);
+const foreignSale = new ForeignSaleStrategy();
 
 const sale = new SaleContext(regularSale);
 console.log("sale", sale.calculate(10));
 
-sale.setStrategy(discoutSale);
+sale.setStrategy(disCountSale);
 console.log("sale", sale.calculate(10));
 
-sale.setStrategy(foreingSale);
+sale.setStrategy(foreignSale);
 console.log("sale", sale.calculate(10));
