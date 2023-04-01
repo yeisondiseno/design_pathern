@@ -75,3 +75,6 @@ console.log(storeProduct.getDetail());
 // decorator 2 with component
 const product = new StoreProductDecorator(comercialInfoProduct, 15.5);
 console.log(storeProduct.getDetail());
+
+const htmlProductDecorator = new HTMLProductDecorator(product);
+myDiv.innerHTML = htmlProductDecorator.getDetail();
